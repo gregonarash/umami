@@ -31,7 +31,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
-RUN apk add openssl1.1-compat
+RUN apk add --update --no-cache openssl1.1-compat
 
 RUN yarn add npm-run-all dotenv prisma
 
